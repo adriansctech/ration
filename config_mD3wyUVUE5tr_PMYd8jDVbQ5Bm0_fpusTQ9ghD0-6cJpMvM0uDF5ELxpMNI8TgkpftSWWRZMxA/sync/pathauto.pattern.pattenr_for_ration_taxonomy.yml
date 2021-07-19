@@ -1,0 +1,35 @@
+uuid: 81f7a48c-05ed-4a24-97c2-cb1dfeba883e
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: pattenr_for_ration_taxonomy
+label: 'Pattern for ration taxonomy'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:name]'
+selection_criteria:
+  62bc4e98-f6bd-43e1-91f4-16147298a00b:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      ration: ration
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 62bc4e98-f6bd-43e1-91f4-16147298a00b
+  6c9b6d85-6bf7-4f40-a9a5-9b774cde3249:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: 6c9b6d85-6bf7-4f40-a9a5-9b774cde3249
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

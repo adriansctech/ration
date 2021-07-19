@@ -1,0 +1,11 @@
+uuid: dfe5c56a-053f-406e-a934-d8f1666fb0e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ration
+id: node.ration
+target_entity_type_id: node
+target_bundle: ration
+default_langcode: site_default
+language_alterable: true

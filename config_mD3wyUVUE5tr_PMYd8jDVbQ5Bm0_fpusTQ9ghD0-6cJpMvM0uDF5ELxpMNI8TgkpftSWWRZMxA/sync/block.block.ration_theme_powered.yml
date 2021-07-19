@@ -1,0 +1,22 @@
+uuid: 5b6c5783-9e45-4178-902a-e3f7d5b1a7c6
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ration_theme
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: ration_theme_powered
+theme: ration_theme
+region: header
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 7d29aabe-2fa4-49f4-8e53-24d37d0c40a2
+langcode: en
+status: false
+dependencies:
+  theme:
+    - ration
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: ration_local_tasks
+theme: ration
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

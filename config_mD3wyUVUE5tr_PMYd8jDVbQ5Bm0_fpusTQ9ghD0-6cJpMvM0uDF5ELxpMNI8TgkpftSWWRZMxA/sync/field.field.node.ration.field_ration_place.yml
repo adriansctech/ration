@@ -1,0 +1,29 @@
+uuid: 41bf4334-8555-40cd-8102-1a282b7eb326
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ration_place
+    - node.type.ration
+    - taxonomy.vocabulary.restaurant
+id: node.ration.field_ration_place
+field_name: field_ration_place
+entity_type: node
+bundle: ration
+label: Restaurant
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      restaurant: restaurant
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

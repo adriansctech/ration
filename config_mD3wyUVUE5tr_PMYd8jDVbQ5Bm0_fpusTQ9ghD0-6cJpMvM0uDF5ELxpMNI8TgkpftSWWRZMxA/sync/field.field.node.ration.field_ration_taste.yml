@@ -1,0 +1,24 @@
+uuid: 114ec4a3-bb60-4e1e-94ac-a6aca29e5347
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ration_taste
+    - node.type.ration
+  module:
+    - starrating
+id: node.ration.field_ration_taste
+field_name: field_ration_taste
+entity_type: node
+bundle: ration
+label: Taste
+description: 'Use this field to rate the taste of the ration, where 0 will be unpleasant and 10 will be recommended.'
+required: true
+translatable: false
+default_value:
+  -
+    value: '5'
+default_value_callback: ''
+settings:
+  max_value: '10'
+field_type: starrating

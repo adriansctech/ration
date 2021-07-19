@@ -1,0 +1,24 @@
+uuid: 192688bc-69b0-43f6-908a-74284c1b7935
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ration_price
+    - node.type.ration
+  module:
+    - starrating
+id: node.ration.field_ration_price
+field_name: field_ration_price
+entity_type: node
+bundle: ration
+label: Price
+description: 'Use this field to catalog the price of the ration, where 0 will be very cheapest and 10 will be expensive.'
+required: false
+translatable: false
+default_value:
+  -
+    value: '5'
+default_value_callback: ''
+settings:
+  max_value: '10'
+field_type: starrating

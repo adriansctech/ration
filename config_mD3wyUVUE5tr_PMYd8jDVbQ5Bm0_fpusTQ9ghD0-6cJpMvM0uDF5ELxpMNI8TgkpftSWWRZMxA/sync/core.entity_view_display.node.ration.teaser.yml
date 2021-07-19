@@ -1,0 +1,59 @@
+uuid: f090a107-2866-40d7-9908-845983bc1993
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ration.body
+    - field.field.node.ration.field_ration_image
+    - field.field.node.ration.field_ration_location
+    - field.field.node.ration.field_ration_place
+    - field.field.node.ration.field_ration_price
+    - field.field.node.ration.field_ration_taste
+    - field.field.node.ration.field_ration_type
+    - node.type.ration
+  module:
+    - image
+    - starrating
+    - user
+id: node.ration.teaser
+targetEntityType: node
+bundle: ration
+mode: teaser
+content:
+  field_ration_image:
+    type: image
+    weight: 2
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_ration_price:
+    type: starrating
+    weight: 1
+    region: content
+    label: above
+    settings:
+      fill_blank: 0
+      icon_type: star
+      icon_color: 1
+    third_party_settings: {  }
+  field_ration_taste:
+    type: starrating
+    weight: 0
+    region: content
+    label: above
+    settings:
+      fill_blank: 0
+      icon_type: star
+      icon_color: 1
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_ration_location: true
+  field_ration_place: true
+  field_ration_type: true
+  langcode: true
+  links: true

@@ -1,0 +1,19 @@
+uuid: 7250ff5b-c861-4be6-95be-181717fcdf0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - starrating
+id: node.field_ration_price
+field_name: field_ration_price
+entity_type: node
+type: starrating
+settings: {  }
+module: starrating
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

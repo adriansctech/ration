@@ -1,0 +1,23 @@
+uuid: ac60143a-9e91-431c-9a62-53d756a7b175
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ration
+  module:
+    - text
+id: node.ration.body
+field_name: body
+entity_type: node
+bundle: ration
+label: Body
+description: 'Use this to describe the taste of the ration.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

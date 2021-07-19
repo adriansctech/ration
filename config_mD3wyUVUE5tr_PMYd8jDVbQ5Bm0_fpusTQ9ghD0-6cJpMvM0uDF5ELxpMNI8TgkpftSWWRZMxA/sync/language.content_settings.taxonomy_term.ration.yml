@@ -1,0 +1,11 @@
+uuid: 7ae7d6ba-720a-467a-990f-d67c65542ca3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ration
+id: taxonomy_term.ration
+target_entity_type_id: taxonomy_term
+target_bundle: ration
+default_langcode: site_default
+language_alterable: true

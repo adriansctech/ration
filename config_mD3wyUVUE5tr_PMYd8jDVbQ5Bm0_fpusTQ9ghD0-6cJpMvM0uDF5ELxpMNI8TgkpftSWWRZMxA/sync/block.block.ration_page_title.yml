@@ -1,0 +1,20 @@
+uuid: d5d715d7-c1c3-4f7f-b7ac-79d923d95ecf
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ration
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: ration_page_title
+theme: ration
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

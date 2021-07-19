@@ -1,0 +1,8 @@
+uuid: 7f3d1bcd-cd61-47f8-b75b-1b7e734c7e86
+langcode: en
+status: true
+dependencies: {  }
+name: Ration
+vid: ration
+description: 'Use this to create a nameś ration like a taxonomy'
+weight: 0

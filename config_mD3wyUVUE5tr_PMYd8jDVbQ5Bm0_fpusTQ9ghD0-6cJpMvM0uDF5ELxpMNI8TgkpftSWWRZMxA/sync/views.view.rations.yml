@@ -1,0 +1,1200 @@
+uuid: e87dee42-482c-4559-bcce-4da5acde0e01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ration_location
+    - field.storage.node.field_ration_place
+    - field.storage.node.field_ration_price
+    - field.storage.node.field_ration_taste
+    - field.storage.node.field_ration_type
+    - filter.format.plain_text
+    - node.type.ration
+    - taxonomy.vocabulary.ration
+  module:
+    - geolocation
+    - node
+    - starrating
+    - taxonomy
+    - user
+id: rations
+label: 'Rations view'
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Default
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: mini
+        options:
+          items_per_page: 10
+          offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_ration_restaurant: field_ration_restaurant
+            title: title
+            field_ration_price: field_ration_price
+            field_ration_taste: field_ration_price
+            field_ration_location: field_ration_location
+          info:
+            field_ration_restaurant:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_ration_price:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_ration_taste:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_ration_location:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
+      row:
+        type: fields
+      fields:
+        field_ration_type:
+          id: field_ration_type
+          table: node__field_ration_type
+          field: field_ration_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Type
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: true
+          plugin_id: field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exclude: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_ration_price:
+          id: field_ration_price
+          table: node__field_ration_price
+          field: field_ration_price
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Opinions
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_ration_price }}</br>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: starrating
+          settings:
+            fill_blank: 0
+            icon_type: dollar
+            icon_color: '1'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_ration_taste:
+          id: field_ration_taste
+          table: node__field_ration_taste
+          field: field_ration_taste
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: starrating
+          settings:
+            fill_blank: 0
+            icon_type: food
+            icon_color: '1'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_ration_place:
+          id: field_ration_place
+          table: node__field_ration_place
+          field: field_ration_place
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Restaurant
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_ration_location:
+          id: field_ration_location
+          table: node__field_ration_location
+          field: field_ration_location
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Location
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: ''
+          type: geolocation_map
+          settings:
+            set_marker: false
+            show_label: false
+            title: ''
+            info_text:
+              value: ''
+              format: plain_text
+            replacement_patterns:
+              token_geolocation:
+                token_items: ''
+            centre:
+              fit_bounds:
+                enable: true
+                settings:
+                  min_zoom: 15
+                  reset_zoom: false
+                weight: -101
+                map_center_id: fit_bounds
+              fixed_value:
+                settings:
+                  latitude: null
+                  longitude: null
+                  location_option_id: fixed_value
+                weight: 0
+                enable: false
+                map_center_id: location_plugins
+              freeogeoip:
+                weight: 0
+                enable: false
+                map_center_id: location_plugins
+                settings:
+                  location_option_id: freeogeoip
+              ipstack:
+                settings:
+                  access_key: ''
+                  location_option_id: ipstack
+                weight: 0
+                enable: false
+                map_center_id: location_plugins
+              fixed_boundaries:
+                settings:
+                  north: ''
+                  east: ''
+                  south: ''
+                  west: ''
+                weight: 0
+                enable: false
+                map_center_id: fixed_boundaries
+              client_location:
+                weight: 0
+                enable: false
+                map_center_id: client_location
+            map_provider_id: leaflet
+            map_provider_settings:
+              map_features:
+                leaflet_control_scale:
+                  weight: 0
+                  settings:
+                    position: topright
+                    metric: true
+                    imperial: false
+                  enabled: false
+                leaflet_tile_layer:
+                  weight: 0
+                  settings:
+                    tile_layer_provider: 'OpenStreetMap Mapnik'
+                    tile_provider_options:
+                      Thunderforest:
+                        apikey: ''
+                      MapBox:
+                        accessToken: ''
+                      HERE:
+                        app_id: ''
+                        app_code: ''
+                      GeoportailFrance:
+                        apikey: ''
+                  enabled: false
+                leaflet_tile_layer_overlay:
+                  weight: 0
+                  settings:
+                    tile_layer_overlay: OpenInfraMap.Power
+                  enabled: false
+                leaflet_custom_tile_layer:
+                  weight: 0
+                  settings:
+                    tile_layer_url: '//{s}.tile.osm.org/{z}/{x}/{y}.png'
+                    tile_layer_attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+                    tile_layer_subdomains: abc
+                    tile_layer_zoom: 18
+                  enabled: false
+                leaflet_max_bounds:
+                  weight: 0
+                  settings:
+                    north: null
+                    south: null
+                    east: null
+                    west: null
+                  enabled: false
+                leaflet_marker_zoom_and_animate:
+                  weight: 0
+                  settings:
+                    marker_zoom_anchor_id: ''
+                  enabled: false
+                geolocation_marker_scroll_to_id:
+                  weight: 0
+                  settings:
+                    scroll_target_id: ''
+                  enabled: false
+                leaflet_marker_popup:
+                  weight: 0
+                  settings:
+                    max_width: 300
+                    min_width: 50
+                    max_height: null
+                    class_name: ''
+                    info_auto_display: false
+                    auto_pan: false
+                    keep_in_view: false
+                    close_button: false
+                    auto_close: false
+                    close_on_escape_key: false
+                  enabled: false
+                leaflet_marker_icon:
+                  weight: 0
+                  settings:
+                    marker_icon_path: ''
+                    icon_size:
+                      width: null
+                      height: null
+                    icon_anchor:
+                      x: null
+                      'y': null
+                    popup_anchor:
+                      x: 0
+                      'y': 0
+                    marker_shadow_path: ''
+                    shadow_size:
+                      width: null
+                      height: null
+                    shadow_anchor:
+                      x: null
+                      'y': null
+                  enabled: false
+                leaflet_marker_clusterer:
+                  weight: 0
+                  settings:
+                    disable_clustering_at_zoom: 0
+                    custom_marker_settings: ''
+                    cluster_settings:
+                      show_coverage_on_hover: false
+                      zoom_to_bounds_on_click: false
+                  enabled: false
+                leaflet_control_zoom:
+                  enabled: true
+                  weight: 0
+                  settings:
+                    position: topright
+                leaflet_control_layer:
+                  weight: 0
+                  settings:
+                    position: topright
+                    default_label: Default
+                    tile_layer_providers:
+                      OpenStreetMap:
+                        'OpenStreetMap Mapnik':
+                          label: ''
+                          checkbox: false
+                        'OpenStreetMap BlackAndWhite':
+                          label: ''
+                          checkbox: false
+                        'OpenStreetMap DE':
+                          label: ''
+                          checkbox: false
+                        'OpenStreetMap CH':
+                          label: ''
+                          checkbox: false
+                        'OpenStreetMap France':
+                          label: ''
+                          checkbox: false
+                        'OpenStreetMap HOT':
+                          label: ''
+                          checkbox: false
+                        'OpenStreetMap BZH':
+                          label: ''
+                          checkbox: false
+                      OpenTopoMap:
+                        OpenTopoMap:
+                          label: ''
+                          checkbox: false
+                      Thunderforest:
+                        'Thunderforest OpenCycleMap':
+                          label: ''
+                          checkbox: false
+                        'Thunderforest Transport':
+                          label: ''
+                          checkbox: false
+                        'Thunderforest TransportDark':
+                          label: ''
+                          checkbox: false
+                        'Thunderforest SpinalMap':
+                          label: ''
+                          checkbox: false
+                        'Thunderforest Landscape':
+                          label: ''
+                          checkbox: false
+                        'Thunderforest Outdoors':
+                          label: ''
+                          checkbox: false
+                        'Thunderforest Pioneer':
+                          label: ''
+                          checkbox: false
+                      OpenMapSurfer:
+                        'OpenMapSurfer Roads':
+                          label: ''
+                          checkbox: false
+                        'OpenMapSurfer Grayscale':
+                          label: ''
+                          checkbox: false
+                      Hydda:
+                        'Hydda Full':
+                          label: ''
+                          checkbox: false
+                        'Hydda Base':
+                          label: ''
+                          checkbox: false
+                      MapBox:
+                        MapBox:
+                          label: ''
+                          checkbox: false
+                      Stamen:
+                        'Stamen Toner':
+                          label: ''
+                          checkbox: false
+                        'Stamen TonerBackground':
+                          label: ''
+                          checkbox: false
+                        'Stamen TonerLite':
+                          label: ''
+                          checkbox: false
+                        'Stamen Watercolor':
+                          label: ''
+                          checkbox: false
+                        'Stamen Terrain':
+                          label: ''
+                          checkbox: false
+                        'Stamen TerrainBackground':
+                          label: ''
+                          checkbox: false
+                        'Stamen TopOSMRelief':
+                          label: ''
+                          checkbox: false
+                      Esri:
+                        'Esri WorldStreetMap':
+                          label: ''
+                          checkbox: false
+                        'Esri DeLorme':
+                          label: ''
+                          checkbox: false
+                        'Esri WorldTopoMap':
+                          label: ''
+                          checkbox: false
+                        'Esri WorldImagery':
+                          label: ''
+                          checkbox: false
+                        'Esri WorldTerrain':
+                          label: ''
+                          checkbox: false
+                        'Esri WorldShadedRelief':
+                          label: ''
+                          checkbox: false
+                        'Esri WorldPhysical':
+                          label: ''
+                          checkbox: false
+                        'Esri OceanBasemap':
+                          label: ''
+                          checkbox: false
+                        'Esri NatGeoWorldMap':
+                          label: ''
+                          checkbox: false
+                        'Esri WorldGrayCanvas':
+                          label: ''
+                          checkbox: false
+                      HERE:
+                        'HERE normalDay':
+                          label: ''
+                          checkbox: false
+                        'HERE normalDayCustom':
+                          label: ''
+                          checkbox: false
+                        'HERE normalDayGrey':
+                          label: ''
+                          checkbox: false
+                        'HERE normalDayMobile':
+                          label: ''
+                          checkbox: false
+                        'HERE normalDayGreyMobile':
+                          label: ''
+                          checkbox: false
+                        'HERE normalDayTransit':
+                          label: ''
+                          checkbox: false
+                        'HERE normalDayTransitMobile':
+                          label: ''
+                          checkbox: false
+                        'HERE normalNight':
+                          label: ''
+                          checkbox: false
+                        'HERE normalNightMobile':
+                          label: ''
+                          checkbox: false
+                        'HERE normalNightGrey':
+                          label: ''
+                          checkbox: false
+                        'HERE normalNightGreyMobile':
+                          label: ''
+                          checkbox: false
+                        'HERE normalNightTransit':
+                          label: ''
+                          checkbox: false
+                        'HERE normalNightTransitMobile':
+                          label: ''
+                          checkbox: false
+                        'HERE redcuedDay':
+                          label: ''
+                          checkbox: false
+                        'HERE redcuedNight':
+                          label: ''
+                          checkbox: false
+                        'HERE basicMap':
+                          label: ''
+                          checkbox: false
+                        'HERE mapLabels':
+                          label: ''
+                          checkbox: false
+                        'HERE trafficFlow':
+                          label: ''
+                          checkbox: false
+                        'HERE carnavDayGrey':
+                          label: ''
+                          checkbox: false
+                        'HERE hybridDayMobile':
+                          label: ''
+                          checkbox: false
+                        'HERE hybridDayTransit':
+                          label: ''
+                          checkbox: false
+                        'HERE hybridDayGrey':
+                          label: ''
+                          checkbox: false
+                        'HERE pedestrianDay':
+                          label: ''
+                          checkbox: false
+                        'HERE pedestrianNight':
+                          label: ''
+                          checkbox: false
+                        'HERE satelliteDay':
+                          label: ''
+                          checkbox: false
+                        'HERE terrainDay':
+                          label: ''
+                          checkbox: false
+                        'HERE terrainDayMobile':
+                          label: ''
+                          checkbox: false
+                      FreeMapSK:
+                        FreeMapSK:
+                          label: ''
+                          checkbox: false
+                      MtbMap:
+                        MtbMap:
+                          label: ''
+                          checkbox: false
+                      CartoDB:
+                        'CartoDB Positron':
+                          label: ''
+                          checkbox: false
+                        'CartoDB PositronNoLabels':
+                          label: ''
+                          checkbox: false
+                        'CartoDB PositronOnlyLabels':
+                          label: ''
+                          checkbox: false
+                        'CartoDB DarkMatter':
+                          label: ''
+                          checkbox: false
+                        'CartoDB DarkMatterNoLabels':
+                          label: ''
+                          checkbox: false
+                        'CartoDB DarkMatterOnlyLabels':
+                          label: ''
+                          checkbox: false
+                        'CartoDB Voyager':
+                          label: ''
+                          checkbox: false
+                        'CartoDB VoyagerNoLabels':
+                          label: ''
+                          checkbox: false
+                        'CartoDB VoyagerOnlyLabels':
+                          label: ''
+                          checkbox: false
+                        'CartoDB VoyagerLabelsUnder':
+                          label: ''
+                          checkbox: false
+                      HikeBike:
+                        HikeBike:
+                          label: ''
+                          checkbox: false
+                        'HikeBike HillShading':
+                          label: ''
+                          checkbox: false
+                      BasemapAT:
+                        'BasemapAT basemap':
+                          label: ''
+                          checkbox: false
+                        'BasemapAT grau':
+                          label: ''
+                          checkbox: false
+                        'BasemapAT overlay':
+                          label: ''
+                          checkbox: false
+                        'BasemapAT highdpi':
+                          label: ''
+                          checkbox: false
+                        'BasemapAT orthofoto':
+                          label: ''
+                          checkbox: false
+                      NLS:
+                        NLS:
+                          label: ''
+                          checkbox: false
+                      Wikimedia:
+                        Wikimedia:
+                          label: ''
+                          checkbox: false
+                      GeoportailFrance:
+                        'GeoportailFrance parcels':
+                          label: ''
+                          checkbox: false
+                        'GeoportailFrance ignMaps':
+                          label: ''
+                          checkbox: false
+                        'GeoportailFrance maps':
+                          label: ''
+                          checkbox: false
+                        'GeoportailFrance orthos':
+                          label: ''
+                          checkbox: false
+                    tile_providers_options:
+                      Thunderforest:
+                        apikey: ''
+                      MapBox:
+                        accessToken: ''
+                      HERE:
+                        app_id: ''
+                        app_code: ''
+                      GeoportailFrance:
+                        apikey: ''
+                  enabled: false
+                leaflet_control_recenter:
+                  weight: 0
+                  settings:
+                    position: topright
+                  enabled: false
+                leaflet_control_locate:
+                  weight: 0
+                  settings:
+                    position: topright
+                  enabled: false
+                leaflet_control_geocoder:
+                  weight: 0
+                  settings:
+                    position: topright
+                    geocoder: photon
+                    settings:
+                      label: Address
+                      description: 'Enter an address to be localized.'
+                      autocomplete_min_length: 1
+                      location_priority:
+                        lat: null
+                        lng: null
+                      remove_duplicates: false
+                  enabled: false
+                leaflet_control_fullscreen:
+                  weight: 0
+                  settings:
+                    position: bottomright
+                  enabled: false
+                leaflet_control_attribution:
+                  weight: 0
+                  settings:
+                    position: bottomright
+                    prefix: Leaflet
+                  enabled: false
+                leaflet_gesture_handling:
+                  weight: 0
+                  enabled: false
+                geolocation_shapes:
+                  weight: 0
+                  settings:
+                    polyline_title: ''
+                    strokeColor: '#FF0000'
+                    strokeOpacity: 0.8
+                    strokeWidth: '2'
+                    polygon_title: ''
+                    fillColor: '#FF0000'
+                    fillOpacity: 0.35
+                    remove_markers: false
+                    polyline: false
+                    polygon: false
+                  enabled: false
+                leaflet_disable_user_interaction:
+                  weight: 0
+                  enabled: false
+                leaflet_client_location_indicator:
+                  weight: 0
+                  enabled: false
+                leaflet_wms:
+                  weight: 0
+                  settings:
+                    url: ''
+                    version: 1.1.1
+                    layers: ''
+                    styles: ''
+                    srs: ''
+                    format: image/jpeg
+                    transparent: false
+                    identify: false
+                  enabled: false
+              height: 200px
+              width: 200px
+              zoom: '0'
+              minZoom: '0'
+              maxZoom: '0'
+              maxBounds:
+                north_east_bound:
+                  lat: null
+                  lng: null
+                south_west_bound:
+                  lat: null
+                  lng: null
+              crs: EPSG3857
+              preferCanvas: false
+              zoomSnap: 1
+              zoomDelta: 1
+              trackResize: false
+              boxZoom: false
+              doubleClickZoom: false
+              dragging: false
+              zoomAnimation: false
+              zoomAnimationThreshold: 4
+              fadeAnimation: false
+              markerZoomAnimation: false
+              inertia: false
+              inertiaDeceleration: 3000
+              worldCopyJump: false
+              easeLinearity: 0.2
+              maxBoundsViscosity: !!float 0
+              keyboard: false
+              keyboardPanDelta: 80
+              scrollWheelZoom: false
+              wheelDebounceTime: 40
+              wheelPxPerZoomLevel: 60
+              tap: false
+              tapTolerance: 15
+              touchZoom: false
+              bounceAtZoomLimits: false
+            use_overridden_map_settings: false
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          plugin_id: geolocation_field
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            ration: ration
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_ration_type_target_id:
+          id: field_ration_type_target_id
+          table: node__field_ration_type
+          field: field_ration_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_ration_type_target_id_op
+            label: Type
+            description: ''
+            use_operator: false
+            operator: field_ration_type_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_ration_type_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: ration
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Search your ration'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_ration_location'
+        - 'config:field.storage.node.field_ration_place'
+        - 'config:field.storage.node.field_ration_price'
+        - 'config:field.storage.node.field_ration_taste'
+        - 'config:field.storage.node.field_ration_type'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: search-your-rations
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_ration_location'
+        - 'config:field.storage.node.field_ration_place'
+        - 'config:field.storage.node.field_ration_price'
+        - 'config:field.storage.node.field_ration_taste'
+        - 'config:field.storage.node.field_ration_type'

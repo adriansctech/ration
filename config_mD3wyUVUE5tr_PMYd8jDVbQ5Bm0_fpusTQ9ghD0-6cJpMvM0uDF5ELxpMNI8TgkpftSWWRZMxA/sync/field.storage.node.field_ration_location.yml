@@ -1,0 +1,19 @@
+uuid: 4896bfd0-73ba-44fa-bcba-f8c50b792fa9
+langcode: en
+status: true
+dependencies:
+  module:
+    - geolocation
+    - node
+id: node.field_ration_location
+field_name: field_ration_location
+entity_type: node
+type: geolocation
+settings: {  }
+module: geolocation
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

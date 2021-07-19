@@ -1,0 +1,22 @@
+uuid: ffeef80e-44cd-429d-9d20-bb118cab297b
+langcode: en
+status: true
+dependencies: {  }
+name: ration_detail
+label: 'Ration detail 220x180'
+effects:
+  3b8cef84-2481-45b9-9811-340857cb1b4f:
+    uuid: 3b8cef84-2481-45b9-9811-340857cb1b4f
+    id: image_resize
+    weight: 1
+    data:
+      width: 220
+      height: 180
+  c585c85e-d715-4f65-9349-4b86d6b524e8:
+    uuid: c585c85e-d715-4f65-9349-4b86d6b524e8
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 220
+      height: 180
+      anchor: center-center

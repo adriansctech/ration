@@ -1,0 +1,22 @@
+uuid: f839868a-19a6-494a-8aab-0b935741c333
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - ration
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: ration_help
+theme: ration
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

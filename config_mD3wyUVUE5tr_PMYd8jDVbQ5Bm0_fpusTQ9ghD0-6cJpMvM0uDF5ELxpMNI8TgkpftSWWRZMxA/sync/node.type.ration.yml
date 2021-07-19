@@ -1,0 +1,17 @@
+uuid: 1ab1b101-6176-47fc-9894-a483c54f3e69
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Ration
+type: ration
+description: 'Use this to decribe the ration'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

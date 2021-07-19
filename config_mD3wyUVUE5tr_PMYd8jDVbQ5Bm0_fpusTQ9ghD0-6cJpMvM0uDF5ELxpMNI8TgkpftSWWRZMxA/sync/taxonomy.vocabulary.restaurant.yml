@@ -1,0 +1,8 @@
+uuid: dc07980a-caa4-4bc6-a7b6-6a1fe19d83bd
+langcode: en
+status: true
+dependencies: {  }
+name: Restaurant
+vid: restaurant
+description: 'Use this to create a restaurant nameś like a taxonomy'
+weight: 0

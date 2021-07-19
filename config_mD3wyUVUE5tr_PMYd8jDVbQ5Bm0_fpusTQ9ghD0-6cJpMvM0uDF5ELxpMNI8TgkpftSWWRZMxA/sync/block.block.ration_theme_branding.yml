@@ -1,0 +1,25 @@
+uuid: dc4b23b5-5a62-45b3-adc8-8f6a5506b0a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ration_theme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: ration_theme_branding
+theme: ration_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

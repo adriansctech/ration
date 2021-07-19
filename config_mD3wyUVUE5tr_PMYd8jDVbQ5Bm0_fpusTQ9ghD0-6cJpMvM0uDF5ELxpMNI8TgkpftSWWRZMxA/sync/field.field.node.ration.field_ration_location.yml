@@ -1,0 +1,21 @@
+uuid: e91ab041-32de-43c0-bae6-c419ea6bf53b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ration_location
+    - node.type.ration
+  module:
+    - geolocation
+id: node.ration.field_ration_location
+field_name: field_ration_location
+entity_type: node
+bundle: ration
+label: Location
+description: 'Use the top left field of the map to search the place of the restaurant.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

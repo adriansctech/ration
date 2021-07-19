@@ -1,0 +1,91 @@
+uuid: b82b08f8-c9e3-4bb8-8b34-5d1c64c6033e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ration.body
+    - field.field.node.ration.field_ration_image
+    - field.field.node.ration.field_ration_location
+    - field.field.node.ration.field_ration_place
+    - field.field.node.ration.field_ration_price
+    - field.field.node.ration.field_ration_taste
+    - field.field.node.ration.field_ration_type
+    - image.style.medium
+    - node.type.ration
+  module:
+    - geolocation
+    - image
+    - starrating
+    - text
+    - user
+id: node.ration.default
+targetEntityType: node
+bundle: ration
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ration_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_ration_location:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  field_ration_place:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ration_price:
+    weight: 104
+    label: above
+    settings:
+      fill_blank: 0
+      icon_type: star
+      icon_color: 1
+    third_party_settings: {  }
+    type: starrating
+    region: content
+  field_ration_taste:
+    weight: 103
+    label: above
+    settings:
+      fill_blank: 0
+      icon_type: star
+      icon_color: 1
+    third_party_settings: {  }
+    type: starrating
+    region: content
+  field_ration_type:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

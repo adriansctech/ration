@@ -1,0 +1,35 @@
+uuid: 5aeba894-09f7-4927-88a2-f2b5ff50f79c
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: pattern_for_restaurant_taxonomy
+label: 'Pattern for restaurant taxonomy'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:name]'
+selection_criteria:
+  82c8f349-1f7d-49b8-a94f-deea72f5af17:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      restaurant: restaurant
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 82c8f349-1f7d-49b8-a94f-deea72f5af17
+  1ec39174-01f4-4931-abca-d1a64275587c:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    uuid: 1ec39174-01f4-4931-abca-d1a64275587c
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

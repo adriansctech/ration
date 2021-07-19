@@ -1,0 +1,11 @@
+uuid: 60ce0e6d-91be-4455-b324-b1ae21518020
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.restaurant
+id: taxonomy_term.restaurant
+target_entity_type_id: taxonomy_term
+target_bundle: restaurant
+default_langcode: site_default
+language_alterable: true

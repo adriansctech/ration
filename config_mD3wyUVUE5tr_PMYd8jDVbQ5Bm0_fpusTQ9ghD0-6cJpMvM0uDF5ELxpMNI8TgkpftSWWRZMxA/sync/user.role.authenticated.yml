@@ -1,0 +1,25 @@
+uuid: 734539c2-9ad0-4b5f-b995-babb83671f7e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access site-wide contact form'
+  - 'access toolbar'
+  - 'create ration content'
+  - 'create terms in ration'
+  - 'create terms in restaurant'
+  - 'delete own ration content'
+  - 'edit own ration content'
+  - 'post comments'
+  - 'search content'
+  - 'use text format basic_html'
+  - 'view media'

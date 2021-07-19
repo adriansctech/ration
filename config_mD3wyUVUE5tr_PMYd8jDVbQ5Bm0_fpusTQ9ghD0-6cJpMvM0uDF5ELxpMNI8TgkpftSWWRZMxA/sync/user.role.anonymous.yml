@@ -1,0 +1,20 @@
+uuid: 95f8e23e-81e3-4059-ae3e-918695d2295d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'create ration content'
+  - 'create terms in ration'
+  - 'create terms in restaurant'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view media'
