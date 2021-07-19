@@ -20,7 +20,6 @@ module:
   devel: 0
   dynamic_page_cache: 0
   editor: 0
-  example: 0
   field: 0
   field_group: 0
   field_slideshow: 0
